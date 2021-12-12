@@ -17,8 +17,10 @@ Brew install doctl
 
 
 # Install Kubernetes for Digital Ocean
-I decided to use Terraform for installing the Kubernetes Cluster for this compettion. Code is located here:
-https://github.com/espenhermansen/kube_challenge_log_mon/tree/main/terraform
+I decided to use Terraform for installing the Kubernetes Cluster for this compettion. Code is located [Here](https://github.com/espenhermansen/kube_challenge_log_mon/tree/main/terraform)
+
+
+
 
 You need to set up the Digital Ocean API Key as enviroment_variable.
 Use: export TF_VAR_do_token="Your API Key"
