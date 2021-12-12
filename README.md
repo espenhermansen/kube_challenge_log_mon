@@ -17,4 +17,13 @@ Brew install doctl
 
 
 # Install Kubernetes for Digital Ocean
-I deciced to use Terraform for installing the Kubernetes Cluster for this compettion. Code is located here:
+I decided to use Terraform for installing the Kubernetes Cluster for this compettion. Code is located here:
+https://github.com/espenhermansen/kube_challenge_log_mon/tree/main/terraform
+
+You need to set up the Digital Ocean API Key as enviroment_variable.
+Use: export TF_VAR_do_token="Your API Key"
+
+When cluster is installed add Kubernetes cluster to your kubeconfig
+doctl kubernetes cluster kubeconfig save do-kubernetes
+
+You can now run Kubectl commands against Kubernetes Cluster and we are ready to install ELK stack
