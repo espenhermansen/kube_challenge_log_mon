@@ -7,13 +7,12 @@ So your applications produce logs. Lots of logs. How are you supposed to analyze
 
 
 # Requirements
+dotctl - For accessing Digital Oceans API <br /> 
 kubectl - To install Kubernetes CLI <br /> 
 helm - To install Helm Charts on Kubernetes Cluster <br /> 
-dotctl - For accessing Digital Oceans API <br /> 
-Access to Digital Ocean Kubernetes Cluster on AKS <br /> 
 
 ### Steps (on MAC)
-Install necessary tools using [homebrew](https://brew.sh) 
+You can install all necessary tools using [homebrew](https://brew.sh) 
 ```
 Brew install kubectl
 Brew install helm
@@ -21,9 +20,10 @@ Brew install doctl
 ```
 
 
-# Install Kubernetes for Digital Ocean
-I decided to use Terraform for installing the Kubernetes Cluster for this compettion. Code is located [Here](https://github.com/espenhermansen/kube_challenge_log_mon/tree/main/terraform)
-
+# Install Kubernetes in Digital Ocean
+I decided to use Terraform for getting the Kbernetes cluster up and running fast. <br /> 
+Terraform Code is located [Here](https://github.com/espenhermansen/kube_challenge_log_mon/tree/main/terraform) <br /> 
+<br /> <br /> 
 You need to set up the Digital Ocean API Key as enviroment_variable. Use:
 ```
 export TF_VAR_do_token="Your API Key"`
@@ -35,5 +35,5 @@ doctl kubernetes cluster kubeconfig save do-kubernetes
 ```
 
 You can now run Kubectl commands against Kubernetes Cluster and we are ready to install ELK stack
-
+<br /> 
 # Install ELK stack
