@@ -10,7 +10,7 @@ dotctl - For accessing Digital Oceans API
 Access to Digital Ocean Kubernetes Cluster on AKS
 
 # Steps (on MAC)
-Install necessary tools using homebrew. (https://brew.sh/)
+Install necessary tools using [homebrew](https://brew.sh)
 `Brew install kubectl`
 `Brew install helm`
 `Brew install doctl`
