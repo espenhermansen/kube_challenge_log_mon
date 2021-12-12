@@ -9,7 +9,7 @@ helm - To install Helm Charts on Kubernetes Cluster
 dotctl - For accessing Digital Oceans API
 Access to Digital Ocean Kubernetes Cluster on AKS
 
-# Steps (on MAC)
+## Steps (on MAC)
 Install necessary tools using [homebrew](https://brew.sh) 
 ```
 Brew install kubectl
