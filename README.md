@@ -1,15 +1,18 @@
 # kube_challenge_log_mon
+
+### Challenge text: 
 Deploy a log monitoring system
 
 So your applications produce logs. Lots of logs. How are you supposed to analyze them? A common solution is to aggregate and analyze them using the ELK stack, alongside fluentd or fluentbit.
 
-# Requirements
-kubectl - To install Kubernetes CLI
-helm - To install Helm Charts on Kubernetes Cluster
-dotctl - For accessing Digital Oceans API
-Access to Digital Ocean Kubernetes Cluster on AKS
 
-## Steps (on MAC)
+# Requirements
+kubectl - To install Kubernetes CLI <br /> 
+helm - To install Helm Charts on Kubernetes Cluster <br /> 
+dotctl - For accessing Digital Oceans API <br /> 
+Access to Digital Ocean Kubernetes Cluster on AKS <br /> 
+
+### Steps (on MAC)
 Install necessary tools using [homebrew](https://brew.sh) 
 ```
 Brew install kubectl
