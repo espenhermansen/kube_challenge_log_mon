@@ -11,11 +11,9 @@ Access to Digital Ocean Kubernetes Cluster on AKS
 
 # Steps (on MAC)
 Install necessary tools using homebrew. (https://brew.sh/)
-`
-Brew install kubectl
-Brew install helm
-Brew install doctl
-`
+`Brew install kubectl`
+`Brew install helm`
+`Brew install doctl`
 
 # Install Kubernetes for Digital Ocean
 I decided to use Terraform for installing the Kubernetes Cluster for this compettion. Code is located [Here](https://github.com/espenhermansen/kube_challenge_log_mon/tree/main/terraform)
