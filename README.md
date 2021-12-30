@@ -6,27 +6,28 @@ Deploy a log monitoring system
 So your applications produce logs. Lots of logs. How are you supposed to analyze them? A common solution is to aggregate and analyze them using the ELK stack, alongside fluentd or fluentbit.
 
 ## Requirements
-dotctl - For accessing Digital Oceans API <br /> 
+doctl - For accessing Digital Oceans API <br /> 
 kubectl - To install Kubernetes CLI <br /> 
 terraform - To spin up Kubernets Cluster in Digital Ocean
 
 ### Steps (on MAC)
 You can install all necessary tools using [homebrew](https://brew.sh) 
 ```
-Brew install kubectl
 Brew install doctl
+Brew install kubectl
+Brew install terraform
 ```
 
 ## Install Kubernetes in Digital Ocean
 I decided to use Terraform for getting the Kubernetes cluster up and running fast. <br /> 
 Terraform Code is located [Here](https://github.com/espenhermansen/kube_challenge_log_mon/tree/main/terraform) <br /> 
 <br /> <br /> 
-You need to set up the Digital Ocean API Key as enviroment_variable. Use:
+You need to set up the Digital Ocean API Key as enviroment_variable. See [Here](https://docs.digitalocean.com/reference/api/create-personal-access-token/) on how to create it. 
 ```
 export TF_VAR_do_token="Your API Key"`
 ```
 
-When cluster is installed add Kubernetes cluster to your kubeconfig
+When cluster is installed add the new Kubernetes cluster to your kubeconfig
 ```
 doctl kubernetes cluster kubeconfig save do-kubernetes
 ```
@@ -38,27 +39,28 @@ You can now run Kubectl commands against Kubernetes Cluster and we are ready to 
 kubectl create -f https://download.elastic.co/downloads/eck/1.9.1/crds.yaml
 kubectl apply -f https://download.elastic.co/downloads/eck/1.9.1/operator.yaml
 ```
-
+<br /> 
 ## Deploy the Elastic Search Cluster
 Create the Elasticsearch cluster by deploying yaml file
 ```
 kubectl apply -f ./manifests/elasticsearch.yaml
 ```
-
-Verify the cluster
+<br /> 
+Verify the elastic cluster, use -w to auto update status
 ```
 kubectl get elasticsearch -w
 ```
 Wait until Health is green and Phase is Ready
 ![image](https://user-images.githubusercontent.com/22987121/147752896-df1636e1-f3be-4602-8bb7-5e74d7e369af.png)
 
-Get the password by using the command
+Get the password for Elastic by using the command
 ```
 PASSWORD=$(kubectl get secret quickstart-es-elastic-user -o go-template='{{.data.elastic | base64decode}}')
 echo $PASSWORD
 ```
+Remember this password it will also be used by Kibana
 
-Portforward so you can reach by https:
+Then portforward so you can reach by https:
 ```
 kubectl port-forward service/quickstart-es-http 9200
 ```
@@ -85,6 +87,7 @@ Go to https://localhost:5601 and login
 log into Kibana and verify logs
 ![image](https://user-images.githubusercontent.com/22987121/147754010-597760c1-12e2-470a-80a3-5537d8f58cde.png)
 
+You can go to discover to find logs..
 
 ### issues occured.
 I had to increase size of nodes in Kubernetes Cluster as I had some issues to get it running with 1 cpu / 2 gb ram
