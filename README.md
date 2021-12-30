@@ -75,5 +75,5 @@ The cluster is ready
 
 
 log into Kibana and verify logs
-![image](https://user-images.githubusercontent.com/22987121/147754010-597760c1-12e2-470a-80a3-5537d8f58cde.png)
+![image](https://user-images.githubusercontent.com/22987121/147754010-597760c1-12e2-470a-80a3-5537d8f58cde.png | =250x250)
 
