@@ -37,3 +37,15 @@ You can now run Kubectl commands against Kubernetes Cluster and we are ready to 
 <br /> 
 ## Install ELK stack
 
+Deploy Elastic 
+```
+kubectl create -f https://download.elastic.co/downloads/eck/1.9.0/crds.yaml
+kubectl apply -f https://download.elastic.co/downloads/eck/1.9.0/operator.yaml
+```
+
+Use helm to install operators
+```
+helm repo add elastic https://helm.elastic.co
+helm repo 
+helm install elastic-operator elastic/eck-operator -n elastic-system --create-namespace
+```
