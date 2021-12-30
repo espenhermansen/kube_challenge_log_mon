@@ -68,3 +68,5 @@ kubectl port-forward service/quickstart-es-http 9200
 Go to a browser and go to https://localhost:9200  - verify that you get this:
 ![image](https://user-images.githubusercontent.com/22987121/147753101-97ef7c2b-f14c-4780-b51c-b881a5c7675e.png)
 The cluster is ready
+
+## Install Kibana
