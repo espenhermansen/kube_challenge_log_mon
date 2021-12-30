@@ -102,7 +102,14 @@ You can go to discover and create index pattern based on filebeats
 ![image](https://user-images.githubusercontent.com/22987121/147785446-853afee0-7681-45e4-864f-033f909d5ecf.png)
 
 
+## Experience
+
+### The good
+Its very easy to get going on Digital Ocean. With Terraform you can easily spin up and down Kubernetes Clusters to test with.
+I tested some of the 1-click apps and that also worked good.
+You get some start credit that you can learn alot with for a couple of months.
 
 ### Some issues I had:
-I had to increase size of nodes in Kubernetes Cluster as I had some issues to get it running with 1 cpu / 2 gb ram
-Increased to 2 cpu / 4gb ram and 5 nodes. 
+The first API key I created endet with a empty space - that gave me alot of issues because I did not see it when copying password.
+I had to increase size of nodes in Kubernetes Cluster as I had some issues to get Elastic up and running with 1 cpu / 2 gb ram
+Increased to 2 cpu / 4gb ram and 5 nodes and it worked fine.
