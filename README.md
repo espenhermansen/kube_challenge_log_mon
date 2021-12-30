@@ -72,3 +72,8 @@ Go to a browser and go to https://localhost:9200  - verify that you get this:
 The cluster is ready
 
 ## Install Kibana
+
+
+log into Kibana and verify logs
+![image](https://user-images.githubusercontent.com/22987121/147754010-597760c1-12e2-470a-80a3-5537d8f58cde.png)
+
