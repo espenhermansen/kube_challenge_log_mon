@@ -86,7 +86,7 @@ Go to https://localhost:5601 and login
 ## Install Filebeats
 Install filebeats as daemonset on Kubernetes Nodes
 ```
-kube```ctl apply -f ./manifests/filebeats.yaml
+kubectl apply -f ./manifests/filebeats.yaml
 ```
 Create a busybox to generate some logs:
 ```
@@ -96,10 +96,12 @@ kubectl run counter --image=busybox --dry-run=client -o yaml -- /bin/sh, -c, 'i=
 ## Go back to Kibana and verify
 
 Log into Kibana and verify logs
+You can go to discover and create index pattern
+
+
 ![image](https://user-images.githubusercontent.com/22987121/147785446-853afee0-7681-45e4-864f-033f909d5ecf.png)
 
 
-You can go to discover to find logs..
 
 ### Some issues I had:
 I had to increase size of nodes in Kubernetes Cluster as I had some issues to get it running with 1 cpu / 2 gb ram
