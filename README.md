@@ -111,5 +111,6 @@ You get some start credit that you can learn alot with for a couple of months.
 
 ### Some issues I had:
 The first API key I created endet with a empty space - that gave me alot of issues because I did not see it when copying password.
+<br />
 I had to increase size of nodes in Kubernetes Cluster as I had some issues to get Elastic up and running with 1 cpu / 2 gb ram
 Increased to 2 cpu / 4gb ram and 5 nodes and it worked fine.
