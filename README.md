@@ -81,6 +81,17 @@ Portforward so you can reach Kibana
 kubectl port-forward service/quickstart-kb-http 5601
 ```
 
+## Install Filebeats
+Installed filebeats as daemonset on Kubernetes Nodes
+```
+kube```ctl apply -f ./manifests/filebeats.yaml
+```
+Create a busybox to generate some logs:
+```
+kubectl run counter --image=busybox --dry-run=client -o yaml -- /bin/sh, -c, 'i=0; while true; do echo "hello world: $i: $(date)"; i=$((i+1)); sleep 3; done
+```
+
+
 The password is the same as ElasticSearch and the username is Elastic
 Go to https://localhost:5601 and login 
 
@@ -89,5 +100,6 @@ log into Kibana and verify logs
 
 You can go to discover to find logs..
 
-### issues occured.
+### Some issues I had:
 I had to increase size of nodes in Kubernetes Cluster as I had some issues to get it running with 1 cpu / 2 gb ram
+Increased to 2 cpu / 4gb ram and 5 nodes. 
