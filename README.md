@@ -54,3 +54,17 @@ kubectl get elasticsearch -w
 Wait until Health is green and Phase is Ready
 ![image](https://user-images.githubusercontent.com/22987121/147752896-df1636e1-f3be-4602-8bb7-5e74d7e369af.png)
 
+Get the password by using the command
+```
+PASSWORD=$(kubectl get secret quickstart-es-elastic-user -o go-template='{{.data.elastic | base64decode}}')
+echo $PASSWORD
+```
+
+Portforward so you can reach by https:
+```
+kubectl port-forward service/quickstart-es-http 9200
+```
+
+Go to a browser and go to https://localhost:9200  - verify that you get this:
+![image](https://user-images.githubusercontent.com/22987121/147753101-97ef7c2b-f14c-4780-b51c-b881a5c7675e.png)
+
