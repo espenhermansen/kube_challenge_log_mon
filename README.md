@@ -96,7 +96,7 @@ kubectl run counter --image=busybox --dry-run=client -o yaml -- /bin/sh, -c, 'i=
 ## Go back to Kibana and verify
 
 Log into Kibana and verify logs
-You can go to discover and create index pattern
+You can go to discover and create index pattern based on filebeats
 
 
 ![image](https://user-images.githubusercontent.com/22987121/147785446-853afee0-7681-45e4-864f-033f909d5ecf.png)
