@@ -35,4 +35,5 @@ doctl kubernetes cluster kubeconfig save do-kubernetes
 
 You can now run Kubectl commands against Kubernetes Cluster and we are ready to install ELK stack
 <br /> 
-# Install ELK stack
+## Install ELK stack
+
