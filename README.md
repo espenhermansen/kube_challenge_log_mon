@@ -46,7 +46,6 @@ Create the Elasticsearch cluster by deploying yaml file
 ```
 kubectl apply -f ./manifests/elasticsearch.yaml
 ```
-<br /> 
 Verify the elastic cluster, use -w to auto update status
 ```
 kubectl get elasticsearch -w
