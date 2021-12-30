@@ -73,6 +73,18 @@ The cluster is ready
 
 ## Install Kibana
 
+Create Kibana from manifest:
+```
+kubectl apply -f ./manifests/kibana.yaml
+```
+
+Portforward so you can reach Kibana
+```
+kubectl port-forward service/quickstart-kb-http 5601
+```
+
+The password is the same as ElasticSearch and the username is Elastic
+Go to https://localhost:5601 and login 
 
 log into Kibana and verify logs
 ![image](https://user-images.githubusercontent.com/22987121/147754010-597760c1-12e2-470a-80a3-5537d8f58cde.png)
