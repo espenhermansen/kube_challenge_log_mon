@@ -35,21 +35,23 @@ doctl kubernetes cluster kubeconfig save do-kubernetes
 
 You can now run Kubectl commands against Kubernetes Cluster and we are ready to install ELK stack
 <br /> 
-## Install Elastic
-
-Install CRDs and operator with RBAC rules
+## Install Elastic CRDs and Operator
 ```
 kubectl create -f https://download.elastic.co/downloads/eck/1.9.1/crds.yaml
 kubectl apply -f https://download.elastic.co/downloads/eck/1.9.1/operator.yaml
 ```
 
-Use helm to install operators
+## Deploy the Elastic Search Cluster
+Create the Elasticsearch cluster by deploying yaml file
 ```
-helm repo add elastic https://helm.elastic.co
-helm repo 
-helm install elastic-operator elastic/eck-operator -n elastic-system --create-namespace
+kubectl apply -f ./manifests/elasticsearch.yaml
 ```
 
-## Deploy the Elastic Search Cluster
-Create the Elasticsearch cluster
+Verify the cluster
+```
+kubectl get elasticsearch
+```
+
+
+
 
