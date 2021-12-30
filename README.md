@@ -5,19 +5,15 @@ Deploy a log monitoring system
 
 So your applications produce logs. Lots of logs. How are you supposed to analyze them? A common solution is to aggregate and analyze them using the ELK stack, alongside fluentd or fluentbit.
 
-
-Kibana is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. 
-
 ## Requirements
 dotctl - For accessing Digital Oceans API <br /> 
 kubectl - To install Kubernetes CLI <br /> 
-helm - To install Helm Charts on Kubernetes Cluster <br /> 
+terraform - To spin up Kubernets Cluster in Digital Ocean
 
 ### Steps (on MAC)
 You can install all necessary tools using [homebrew](https://brew.sh) 
 ```
 Brew install kubectl
-Brew install helm
 Brew install doctl
 ```
 
@@ -89,3 +85,6 @@ Go to https://localhost:5601 and login
 log into Kibana and verify logs
 ![image](https://user-images.githubusercontent.com/22987121/147754010-597760c1-12e2-470a-80a3-5537d8f58cde.png)
 
+
+### issues occured.
+I had to increase size of nodes in Kubernetes Cluster as I had some issues to get it running with 1 cpu / 2 gb ram
