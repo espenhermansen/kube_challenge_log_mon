@@ -80,9 +80,11 @@ Portforward so you can reach Kibana
 ```
 kubectl port-forward service/quickstart-kb-http 5601
 ```
+The password is the same as ElasticSearch and the username is Elastic
+Go to https://localhost:5601 and login 
 
 ## Install Filebeats
-Installed filebeats as daemonset on Kubernetes Nodes
+Install filebeats as daemonset on Kubernetes Nodes
 ```
 kube```ctl apply -f ./manifests/filebeats.yaml
 ```
@@ -91,12 +93,11 @@ Create a busybox to generate some logs:
 kubectl run counter --image=busybox --dry-run=client -o yaml -- /bin/sh, -c, 'i=0; while true; do echo "hello world: $i: $(date)"; i=$((i+1)); sleep 3; done
 ```
 
+## Go back to Kibana and verify
 
-The password is the same as ElasticSearch and the username is Elastic
-Go to https://localhost:5601 and login 
+Log into Kibana and verify logs
+![image](https://user-images.githubusercontent.com/22987121/147785446-853afee0-7681-45e4-864f-033f909d5ecf.png)
 
-log into Kibana and verify logs
-![image](https://user-images.githubusercontent.com/22987121/147754010-597760c1-12e2-470a-80a3-5537d8f58cde.png)
 
 You can go to discover to find logs..
 
