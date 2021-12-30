@@ -52,6 +52,8 @@ Verify the cluster
 kubectl get elasticsearch
 ```
 
+![image](https://user-images.githubusercontent.com/22987121/147752862-dfdf96f2-ca7d-4c41-8b58-1b0ebc103fb7.png)
+
 
 
 
