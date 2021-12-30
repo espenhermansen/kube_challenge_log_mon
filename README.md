@@ -6,6 +6,8 @@ Deploy a log monitoring system
 So your applications produce logs. Lots of logs. How are you supposed to analyze them? A common solution is to aggregate and analyze them using the ELK stack, alongside fluentd or fluentbit.
 
 
+Kibana is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. 
+
 ## Requirements
 dotctl - For accessing Digital Oceans API <br /> 
 kubectl - To install Kubernetes CLI <br /> 
