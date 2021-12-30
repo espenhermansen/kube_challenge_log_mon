@@ -23,6 +23,7 @@ I decided to use Terraform for getting the Kubernetes cluster up and running fas
 Terraform Code is located [Here](https://github.com/espenhermansen/kube_challenge_log_mon/tree/main/terraform) <br /> 
 <br /> <br /> 
 You need to set up the Digital Ocean API Key as enviroment_variable. See [Here](https://docs.digitalocean.com/reference/api/create-personal-access-token/) on how to create it. 
+
 ```
 export TF_VAR_do_token="Your API Key"`
 ```
@@ -40,6 +41,7 @@ kubectl create -f https://download.elastic.co/downloads/eck/1.9.1/crds.yaml
 kubectl apply -f https://download.elastic.co/downloads/eck/1.9.1/operator.yaml
 ```
 <br /> 
+
 ## Deploy the Elastic Search Cluster
 Create the Elasticsearch cluster by deploying yaml file
 ```
