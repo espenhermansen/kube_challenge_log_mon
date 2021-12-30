@@ -37,7 +37,7 @@ You can now run Kubectl commands against Kubernetes Cluster and we are ready to 
 <br /> 
 ## Install Elastic
 
-Install CRDs andoperator with RBAC rules
+Install CRDs and operator with RBAC rules
 ```
 kubectl create -f https://download.elastic.co/downloads/eck/1.9.1/crds.yaml
 kubectl apply -f https://download.elastic.co/downloads/eck/1.9.1/operator.yaml
