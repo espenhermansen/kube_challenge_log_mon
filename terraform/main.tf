@@ -5,7 +5,7 @@ resource "digitalocean_kubernetes_cluster" "k8s" {
 
   node_pool {
     name       = "do-kube-nodes"
-    size       = "s-1vcpu-2gb"
-    node_count = "2"
+    size       = "s-2vcpu-4gb"
+    node_count = "5"
   }
 }
