@@ -114,3 +114,12 @@ The first API key I created endet with a empty space - that gave me alot of issu
 <br />
 I had to increase size of nodes in Kubernetes Cluster as I had some issues to get Elastic up and running with 1 cpu / 2 gb ram
 Increased to 2 cpu / 4gb ram and 5 nodes and it worked fine.
+
+### Printscreens from Kubernetes Cluster in Digital Ocean:
+Dashboard
+![image](https://user-images.githubusercontent.com/22987121/148650468-ba7dbdfc-4da3-47cc-817b-e41cc0f3ef46.png)
+It easy to add applications with 1-click
+![image](https://user-images.githubusercontent.com/22987121/148650496-9a031af2-640b-4ab3-932b-f14fb43038b6.png)
+
+
+
