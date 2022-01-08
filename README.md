@@ -116,9 +116,11 @@ I had to increase size of nodes in Kubernetes Cluster as I had some issues to ge
 Increased to 2 cpu / 4gb ram and 5 nodes and it worked fine.
 
 ### Printscreens from Kubernetes Cluster in Digital Ocean:
-Dashboard
+Dashboard:
+![image](https://user-images.githubusercontent.com/22987121/148650532-a232de4a-491f-43f7-a6e5-abe4b3e144e2.png)
+Nodes:
 ![image](https://user-images.githubusercontent.com/22987121/148650468-ba7dbdfc-4da3-47cc-817b-e41cc0f3ef46.png)
-It easy to add applications with 1-click
+It easy to add applications with 1-click:
 ![image](https://user-images.githubusercontent.com/22987121/148650496-9a031af2-640b-4ab3-932b-f14fb43038b6.png)
 
 
